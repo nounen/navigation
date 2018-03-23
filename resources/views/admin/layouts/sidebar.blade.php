@@ -14,6 +14,7 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
 
+            @if(isset($menus))
             @foreach($menus AS $menu)
             <li class="{{--active--}} treeview">
                 <a href="#">
@@ -35,6 +36,8 @@
                 </ul>
             </li>
             @endforeach
+            @endif
+
             <li>
                 <a href="https://adminlte.io/docs">
                     <i class="fa fa-book"></i>
