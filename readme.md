@@ -26,12 +26,6 @@ php artisan serve
 
 * `npm run dev` 生成压缩文件.
 
-```html
-* adminlte_app.blade.php 支持传参, 是否隐藏 header footer sidebar
-@extends('layouts.adminlte_app', ['hidden_header' => true, 'hidden_footer' => true, 'hidden_sidebar' => true])
-
-```
-
 
 ### 迁移文件
 * `php artisan make:migration create_users_table --[create|table]=users`
@@ -48,18 +42,6 @@ php artisan serve
 
 ### 表单验证
 * `php artisan make:request Admin/TagPost`
-
-### CURD 通用后台设计
-* 要点: 通过配置实现
-
-* 列表: _index
-    * 列表数据
-    * 编辑入口: 创建 / 编辑 / 查看 / 删除 (权限)
-        * TODO: 如何扩展更多操作权限的入口按钮
-* 新增: _create
-* 编辑: _update
-* 查看: _detail
-* 删除: _delete
 
 ### 表单
 * http://www.w3school.com.cn/html/html_forms.asp
