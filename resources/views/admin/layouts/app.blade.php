@@ -30,9 +30,14 @@
     <div class="content-wrapper">
         <section class="content-header">
             @if(isset($hidden_sidebar) && $hidden_sidebar)
+                ""
             @else
                 <h1>
-                TODO: title
+                @if(isset($title))
+                    {{$title}}
+                @else
+                    ""
+                @endif
                 </h1>
             @endif
         </section>

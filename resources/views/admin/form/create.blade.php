@@ -21,7 +21,7 @@
 @endsection
 
 @section('js')
-<script type="application/javascript">
-console.log('js 扩展! 比如表单校验哇!');
-</script>
+    <script type="application/javascript">
+        console.log('js 扩展! 比如表单校验哇!');
+    </script>
 @endsection
