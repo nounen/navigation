@@ -3,9 +3,9 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>title</title>
-    <meta name="keywords" content="keywords" />
-    <meta name="description" content="description" />
+    <title>{{ $setting->title }}</title>
+    <meta name="keywords" content="{{ $setting->keywords }}" />
+    <meta name="description" content="{{ $setting->description }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/base.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/common.css') }}">
     <script src="{{ asset('web/js/jquery.min.js') }}" type="text/jscript" language="javascript"></script>
@@ -83,16 +83,17 @@
     <!--toolnavbar-end-->
 </div>
 
+@if(count($lefts))
 <div class="lift-nav" style="display: block;">
     <ul class="lift">
-        <li class=""><a href="">百度</a></li>
-        <li class=""><a href="">百度</a></li>
-        <li class=""><a href="">百度</a></li>
-        <li class=""><a href="">百度</a></li>
-        <li class=""><a href="">百度</a></li>
-        <li class=""><a href="">百度</a></li>
+        @foreach($lefts as $link)
+        <li class="">
+            <a target="_blank" href="{{ $link->url }}">{{ $link->name }}</a>
+        </li>
+        @endforeach
     </ul>
 </div>
+@endif
 
 <div class="gotop hide" id="gotop">
     <a class="cz-weixin" style=" display:none;" href="javascript:;"></a>
