@@ -14,5 +14,6 @@ return [
         'file'    => ':attribute 不能超过 :max 字节.',
         'string'  => ':attribute 不能超过 :max 个字.',
         'array'   => ':attribute 不能超过 :max 个.',
+        'url'     => ':attribute 格式不正确.',
     ],
 ];

@@ -74,44 +74,6 @@ class CategoryController extends Controller
     }
 
     /**
-     * 更新页面
-     *
-     * @param $id
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function edit($id)
-    {
-        $this->data['title'] = '分类详情';
-
-        $this->data['item'] = Category::find($id);
-
-        return view('admin.category.edit', $this->data);
-    }
-
-    /**
-     * 更新数据
-     *
-     * @param CategoryRequest $request
-     * @param $id
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
-     */
-    public function update(CategoryRequest $request, $id)
-    {
-        $input = $request->only([
-            'sort',
-            'name',
-        ]);
-
-        $item = Category::find($id);
-
-        $item->update($input);
-
-        $url = "{$this->data['base_url']}/{$item->parent_id}/list";
-
-        return redirect($url);
-    }
-
-    /**
      * 创建页面
      *
      * @param int $id
@@ -172,6 +134,44 @@ class CategoryController extends Controller
         $item->save();
 
         $url = "{$this->data['base_url']}/{$id}/list";
+
+        return redirect($url);
+    }
+
+    /**
+     * 更新页面
+     *
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function edit($id)
+    {
+        $this->data['title'] = '分类详情';
+
+        $this->data['item'] = Category::find($id);
+
+        return view('admin.category.edit', $this->data);
+    }
+
+    /**
+     * 更新数据
+     *
+     * @param CategoryRequest $request
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function update(CategoryRequest $request, $id)
+    {
+        $input = $request->only([
+            'sort',
+            'name',
+        ]);
+
+        $item = Category::find($id);
+
+        $item->update($input);
+
+        $url = "{$this->data['base_url']}/{$item->parent_id}/list";
 
         return redirect($url);
     }

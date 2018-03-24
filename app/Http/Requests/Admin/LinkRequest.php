@@ -3,8 +3,9 @@
 namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Request;
 
-class CategoryRequest extends FormRequest
+class LinkRequest extends FormRequest
 {
     /**
      * 判断用户是否有权限做出此请求。
@@ -21,19 +22,25 @@ class CategoryRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(Request $request)
     {
         $rules['name'][] = 'required';
+
         $rules['sort'][] = 'required';
         $rules['sort'][] = 'numeric';
+
+        $rules['url'][]  = 'required';
+        $rules['url'][]  = 'url';
+
         return $rules;
     }
 
     public function attributes()
     {
         return [
-            'name' => '名称',
             'sort' => '排序',
+            'name' => '名称',
+            'url'  => '链接',
         ];
     }
 }
