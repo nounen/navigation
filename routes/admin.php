@@ -15,37 +15,50 @@ Route::namespace('Admin')->prefix('/admin')->name('admin.')->group(function () {
         /**
          * 分类管理
          */
-//        Route::get('/category', 'CategoryController@index');
-        // 列表
-        Route::get('/category/{id}/list', 'CategoryController@index');
+        Route::prefix('category')->group(function () {
+    //        Route::get('', 'CategoryController@index');
+            // 列表
+            Route::get('/{id}/list', 'CategoryController@index');
 
-        // 创建
-        Route::get('/category/{id}/create', 'CategoryController@create');
-        Route::post('/category/{id}/store', 'CategoryController@store');
+            // 创建
+            Route::get('/{id}/create', 'CategoryController@create');
+            Route::post('/{id}/store', 'CategoryController@store');
 
-        // 修改
-        Route::get('/category/{id}/edit', 'CategoryController@edit');
-        Route::patch('/category/{id}/update', 'CategoryController@update');
+            // 修改
+            Route::get('/{id}/edit', 'CategoryController@edit');
+            Route::patch('/{id}/update', 'CategoryController@update');
 
-        // 删除
-        Route::delete('/category/{id}', 'CategoryController@delete');
+            // 删除
+            Route::delete('/{id}', 'CategoryController@delete');
+        });
 
 
         /**
          * （分类下的）链接管理
          */
-        // 列表
-        Route::get('/link/{id}/list', 'LinkController@index');
+        Route::prefix('link')->group(function () {
+            // 列表
+            Route::get('/{id}/list', 'LinkController@index');
 
-        // 创建
-        Route::get('/link/{id}/create', 'LinkController@create');
-        Route::post('/link/{id}/store', 'LinkController@store');
+            // 创建
+            Route::get('/{id}/create', 'LinkController@create');
+            Route::post('/{id}/store', 'LinkController@store');
 
-        // 修改
-        Route::get('/link/{id}/edit', 'LinkController@edit');
-        Route::patch('/link/{id}/update', 'LinkController@update');
+            // 修改
+            Route::get('/{id}/edit', 'LinkController@edit');
+            Route::patch('/{id}/update', 'LinkController@update');
 
-        // 删除
-        Route::delete('/link/{id}', 'LinkController@delete');
+            // 删除
+            Route::delete('/{id}', 'LinkController@delete');
+        });
+
+
+        /**
+         * SEO 设置
+         */
+        Route::prefix('setting')->group(function () {
+            Route::get('/edit', 'SettingController@edit');
+            Route::post('/store', 'SettingController@store');
+        });
     });
 });

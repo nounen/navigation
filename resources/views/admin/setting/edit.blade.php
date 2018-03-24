@@ -3,32 +3,31 @@
 @section('content')
 <div class="box box-primary">
     <form role="form" class="form-horizontal" enctype="multipart/form-data"
-          method="POST" action="{{ $base_url }}/{{ $id }}/store" >
+          method="POST" action="{{ $base_url }}/store" >
 
         {{ csrf_field() }}
 
         <div class="box-body">
-            <div class="form-group">
-                <label for="sort" class="col-sm-2">排序</label>
+             <div class="form-group">
+                <label for="title" class="col-sm-2">标题</label>
                 <div class="col-sm-10">
-                    <input id="sort" name="sort" type="number"
-                           value="{{ $sort }}" class="form-control" placeholder="排序">
+                    <input id="title" name="title"
+                           value="{{$item->title}}" class="form-control" placeholder="标题">
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="name" class="col-sm-2">名称</label>
+                <label for="keywords" class="col-sm-2">关键词</label>
                 <div class="col-sm-10">
-                    <input id="name" name="name" type="text"
-                           value="" class="form-control" placeholder="名称">
+                    <input id="keywords" name="keywords" type="text"
+                           value="{{$item->keywords}}" class="form-control" placeholder="关键词">
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="url" class="col-sm-2">链接</label>
+                <label for="description" class="col-sm-2">描述</label>
                 <div class="col-sm-10">
-                    <input id="url" name="url" type="text"
-                           value="http://" class="form-control" placeholder="链接">
+                    <textarea name="description" id="description" class="form-control" placeholder="描述">{{ $item->description }}</textarea>
                 </div>
             </div>
         </div>
@@ -43,7 +42,7 @@
 @endsection
 
 @section('js')
-<script type="application/javascript">
-    console.log('edit init,');
-</script>
+    <script type="application/javascript">
+        console.log('edit init,');
+    </script>
 @endsection

@@ -15,37 +15,14 @@
             <li class="header">MAIN NAVIGATION</li>
 
             @if(isset($menus))
-            @foreach($menus AS $menu)
-            <li class="{{--active--}} treeview">
-                <a href="#">
-                    <i class="fa {{ $menu['icon'] }}"></i>
-                    <span>{{ $menu['name'] }}</span>
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-
-                <ul class="treeview-menu">
-                    @foreach($menu['childrens'] AS $children)
-                    <li class="{{--active--}}">
-                        <a href="{{ $children['url'] }}">
-                            <i class="fa {{ $children['icon'] }}"></i> {{ $children['name'] }}
-                        </a>
-                    </li>
-                    @endforeach
-                </ul>
-            </li>
-            @endforeach
+                @foreach($menus AS $menu)
+                <li>
+                    <a href="{{ $menu['url'] }}">
+                        <span>{{ $menu['name'] }}</span>
+                    </a>
+                </li>
+                @endforeach
             @endif
-
-            <li>
-                <a href="https://adminlte.io/docs">
-                    <i class="fa fa-book"></i>
-                    <span>Documentation</span>
-                </a>
-            </li>
         </ul>
-
     </section>
-    <!-- /.sidebar -->
 </aside>

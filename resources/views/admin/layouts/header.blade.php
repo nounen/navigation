@@ -1,6 +1,6 @@
 <header class="main-header">
-    <a href="{{ url('admin/tag') }}" class="logo">
-        <span class="logo-lg"><b>CURD</b></span>
+    <a class="logo">
+        <span class="logo-lg"><b>后台管理</b></span>
     </a>
 
     <nav class="navbar navbar-static-top">
@@ -10,23 +10,13 @@
 
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-                <li class="dropdown messages-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-envelope-o"></i>
-                        <span class="label label-danger">1</span>
-                    </a>
-                </li>
-
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="https://adminlte.io/themes/AdminLTE/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs">Nounen</span>
+                        <span class="hidden-xs"></span>
                     </a>
                     <ul class="dropdown-menu" style="width: auto;">
                         <li class="user-footer">
-                            <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">个人资料</a>
-                            </div>
                             <div class="pull-right">
                                 <a href="{{ url('admin/logout') }}" class="btn btn-default btn-flat"
                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
