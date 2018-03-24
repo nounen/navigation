@@ -23,7 +23,7 @@ class HomeController extends BaseController
         $data = [];
 
         // 链接每一页多少条
-        $data['per_page'] = 7;
+        $data['per_page'] = 5;
 
         $data['setting'] = Setting::first();
 
