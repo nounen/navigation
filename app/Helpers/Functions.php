@@ -34,6 +34,18 @@ if (! function_exists('getXxxNameAttribute')) {
     }
 }
 
+if (! function_exists('getQueryLog')) {
+    /**
+     * 打印数据库查询
+     *
+     * @author lxl 2017.11.14
+     */
+    function getQueryLog()
+    {
+        dd(\DB::getQueryLog());
+    }
+}
+
 if (!function_exists('search')) {
     /**
      * 模型搜索通用方法
