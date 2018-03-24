@@ -22,6 +22,9 @@ class HomeController extends BaseController
     {
         $data = [];
 
+        // 链接每一页多少条
+        $data['per_page'] = 7;
+
         $data['setting'] = Setting::first();
 
         $data['lefts'] = $this->getLeftLinks();

@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/base.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/common.css') }}">
     <script src="{{ asset('web/js/jquery.min.js') }}" type="text/jscript" language="javascript"></script>
+    <script src="{{ asset('web/js/jqpaginator.min.js') }}" type="text/jscript" language="javascript"></script>
     <script src="{{ asset('web/js/public.js') }}" type="text/jscript" language="javascript"></script>
 </head>
 
@@ -98,6 +99,24 @@
     <a class="go" href="javascript:;"></a>
 </div>
 
+<style>
+.lsmore a {
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    display: inline;
+    border: 1px solid #e6e5eb;
+    padding: 2px;
+}
+
+.lsmore>.disabled>span, .lsmore>.disabled>span:hover, .lsmore>.disabled>span:focus, .lsmore>.disabled>a, .lsmore>.disabled>a:hover, .lsmore>.disabled>a:focus {
+    color: #999;
+    background-color: #fff;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
+</style>
+
 <!--topindexcentwrap-->
 <div class="wrapper topindexcentwrap pt10">
     <div class="mainlist02 pt20 clearfix">
@@ -118,21 +137,50 @@
                             <span class="tscore">&nbsp;</span>
                         </li>
 
-                        @foreach($category->links as $link)
-                        <li class="lsclist">
-                            <span class="nos @if($link->sort < 4) bgred @endif">{{ $link->sort }}</span>
+                        <div id="category_{{ $category->id }}_links">
+                            {{-- 分类的链接再分页 --}}
+                            @foreach($category->links->chunk($per_page) as $key => $links)
+                                {{-- 每组分页 --}}
+                                <div id="category_{{ $category->id }}_links_{{ ++$key }}" style="display: none;">
+                                    @foreach($links as $link)
+                                    <li class="lsclist">
+                                        <span class="nos @if($link->sort < 4) bgred @endif">{{ $link->sort }}</span>
 
-                            <span class="tname">
-                                <a target="_blank" href="{{ $link->url }}">{{ $link->name }}</a>
-                            </span>
+                                        <span class="tname">
+                                            <a target="_blank" href="{{ $link->url }}">{{ $link->name }}</a>
+                                        </span>
 
-                            <span class="tscore @if($link->sort > 3) gray @else col-red03 @endif">↑ &nbsp;</span>
+                                        <span class="tscore @if($link->sort > 3) gray @else col-red03 @endif">↑ &nbsp;</span>
+                                    </li>
+                                    @endforeach
+                                </div>
+                            @endforeach
+                        </div>
+
+                        <li class="lsmore" id="category_{{ $category->id }}"
+                            style="text-align: center; padding-top: 3px !important;">
+                            <a target="_blank" href=""></a>
                         </li>
-                        @endforeach
 
-                        <li class="lsmore">
-                            <a target="_blank" href="/hangye/index_jiaotonglvyou_lvyou.html">更多旅游排行</a>
-                        </li>
+                        {{-- 分页处理 --}}
+                        <script>
+                            $("#category_{{ $category->id }}").jqPaginator({
+                                totalPages: {{ ceil(count($category->links) / $per_page) }},
+                                visiblePages: 1,
+                                currentPage: 1, // 之前点击的页码, 用户辅助影藏
+                                lastPage: 1,
+                                prev: '<span class="prev"><a href="javascript:void(0);">上一页<\/a><\/span>    ',
+                                next: '<span class="next"><a href="javascript:void(0);">下一页<\/a><\/span>',
+                                onPageChange: function (nowPage, type) {
+                                    $("#category_{{ $category->id }}_links_" + nowPage).show();
+
+                                    if (type == 'change') {
+                                        $("#category_{{ $category->id }}_links_" + this.lastPage).hide();
+                                        this.lastPage = nowPage;
+                                    }
+                                }
+                            });
+                        </script>
                     </ul>
                 </div>
             </div>
