@@ -30,13 +30,13 @@
     <div class="content-wrapper">
         <section class="content-header">
             @if(isset($hidden_sidebar) && $hidden_sidebar)
-                ""
+                {{--无--}}
             @else
                 <h1>
                 @if(isset($title))
                     {{$title}}
                 @else
-                    ""
+                    {{--无--}}
                 @endif
                 </h1>
             @endif
