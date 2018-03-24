@@ -49,12 +49,7 @@ class HomeController extends BaseController
 
             $data['categories'] = $category->subs->load('links');
         } else {
-            $data['categories'] = Category::with([
-                                        'links',
-                                        'subs' => function ($query) {
-                                            $query->whereNotIn('parent_id', [1, 2, 3, 4]);
-                                        }
-                                    ])->get();
+            $data['categories'] = Category::with('links','subs')->get();
         }
 
         return view('web.home', $data);

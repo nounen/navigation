@@ -122,7 +122,8 @@
     <div class="mainlist02 pt20 clearfix">
 
         @foreach($categories as $category)
-            @if(count($category->links))
+            {{-- 分类大于4 且分类下面有链接 --}}
+            @if($category->id > 4 && count($category->links))
             <div class="mlistwrap w300 mr40">
                 <div class="lscent300">
                     <h4 class="lscehead">
