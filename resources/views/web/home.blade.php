@@ -196,7 +196,7 @@
     <div class="tpfooter">
         <div class="tpmain">
             <!-- <p>
-                <a href="//www.test.com/aboutus/index.html" target="_blank">关于站长之家</a> -
+                <a href="//www.test.com/aboutus/index.html" target="_blank">关于Xxx</a> -
                 <a href="//ww.test.com/aboutus/contact.php?from=news" target="_blank">联系我们</a> -
                 <a href="//www.test.com/aboutus/ad.html" target="_blank">广告服务</a> -
                 <a href="//www.test.com/aboutus/link.html" target="_blank">友情链接</a> -
@@ -205,7 +205,7 @@
                 <a href="//www.test.com/aboutus/events.html" target="_blank">网站动态</a> -
                 <a href="//www.test.com/aboutus/help.html" target="_blank">帮助</a> -
             </p> -->
-            <p>©copyright 2002-2018 test.com inc all rights reserved. 站长之家 版权所有&nbsp;&nbsp;</p>
+            <p>©copyright 2002-2018 test.com inc all rights reserved. Xxx 版权所有&nbsp;&nbsp;</p>
         </div>
     </div>
 </div>
