@@ -175,4 +175,22 @@ class CategoryController extends Controller
 
         return redirect($url);
     }
+
+
+    /**
+     * 删除数据
+     *
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function delete($id)
+    {
+        $item = Category::find($id);
+
+        $item->delete();
+
+        $url = "{$this->data['base_url']}/{$item->parent_id}/list";
+
+        return redirect($url);
+    }
 }

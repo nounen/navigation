@@ -27,6 +27,9 @@ Route::namespace('Admin')->prefix('/admin')->name('admin.')->group(function () {
         Route::get('/category/{id}/edit', 'CategoryController@edit');
         Route::patch('/category/{id}/update', 'CategoryController@update');
 
+        // 删除
+        Route::delete('/category/{id}', 'CategoryController@delete');
+
 
         /**
          * （分类下的）链接管理
@@ -42,7 +45,7 @@ Route::namespace('Admin')->prefix('/admin')->name('admin.')->group(function () {
         Route::get('/link/{id}/edit', 'LinkController@edit');
         Route::patch('/link/{id}/update', 'LinkController@update');
 
+        // 删除
         Route::delete('/link/{id}', 'LinkController@delete');
-
     });
 });

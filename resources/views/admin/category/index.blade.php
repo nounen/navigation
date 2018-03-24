@@ -39,7 +39,7 @@
                             @endif
 
                             @if($add_link)
-                            <a href="/link/{{ $item->id }}/list">
+                            <a href="/admin/link/{{ $item->id }}/list">
                                 <button type="button" class="btn btn-flat btn-xs btn-info">链接管理</button>
                             </a>
                             @endif

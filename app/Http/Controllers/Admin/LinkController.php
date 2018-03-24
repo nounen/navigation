@@ -140,9 +140,7 @@ class LinkController extends Controller
     {
         $link = Link::find($id);
 
-        if ($link) {
-            $link->delete();
-        }
+        $link->delete();
 
         $url = "{$this->data['base_url']}/{$link->category_id}/list";
 
