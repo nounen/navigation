@@ -8,8 +8,10 @@
     <meta name="description" content="{{ $setting->description }}"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/base.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('web/css/common.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('web/css/swiper.mini.css') }}">
     <script src="{{ asset('web/js/jquery.min.js') }}" type="text/jscript" language="javascript"></script>
     <script src="{{ asset('web/js/jqpaginator.min.js') }}" type="text/jscript" language="javascript"></script>
+    <script src="{{ asset('web/js/swiper.min.js') }}" type="text/jscript" language="javascript"></script>
     <script src="{{ asset('web/js/public.js') }}" type="text/jscript" language="javascript"></script>
 </head>
 
@@ -119,8 +121,38 @@
 
 <!--topindexcentwrap-->
 <div class="wrapper topindexcentwrap pt10">
-    <div class="mainlist02 clearfix">
+    {{-- 幻灯片 start --}}
+    <div class="swiper-container" style="margin: 0; width: 1447px;">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/swiper_01.png">
+            </div>
 
+            <div class="swiper-slide">
+                <img src="./images/swiper_02.png">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="./images/swiper_03.png">
+            </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    </script>
+    {{-- 幻灯片 end --}}
+
+    <div class="mainlist02 clearfix pt10">
         @foreach($categories as $category)
             {{-- 分类大于4 且分类下面有链接 --}}
             @if($category->id > 4 && count($category->links))
@@ -128,8 +160,11 @@
                 <div class="lscent300">
                     <h4 class="lscehead">
                         <span class="h4tit">
-                            <i></i>{{ $category->name }}
+                            {{--<i></i> --}}
+                            <b>{{ $category->name }}</b>
                         </span>
+                        
+                        <img src="./images/group.png" style="border:1px solid #e6e5eb; width: 255px;">
                     </h4>
                     <ul>
                         <li class="lsctit i7">

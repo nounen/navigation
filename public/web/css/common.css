@@ -1504,10 +1504,8 @@ body.bgwhite {
 }
 
 .lscehead {
-	padding: 8px 7px;
-	height: 26px;
-	line-height: 26px;
-	border-bottom: 1px solid #999;
+	padding: 2px 0px 6px 0px;
+	height: 85px;
 }
 
 .lscehead .h4tit {
