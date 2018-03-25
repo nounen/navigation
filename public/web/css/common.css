@@ -1404,7 +1404,7 @@ body.bgwhite {
 }
 
 .lscent265 ul li.lsctit .nos, .lscent327 ul li.lsctit .nos, .lscent300 ul li.lsctit .nos {
-	width: 30px;
+	width: 32px;
 	margin-right: 10px;
 }
 
@@ -1495,6 +1495,8 @@ body.bgwhite {
 .lscent300 {
 	width: 255px;
 	margin-bottom: 10px;
+	border: 1px solid #e6e5eb;
+	padding: 7px;
 }
 
 .mainlist02 .w300 {
@@ -6392,8 +6394,7 @@ a.qhpcbtn:hover {
 .lift-nav {
     position: fixed;
     top: 162px;
-    left: 100px;
-    display: none;
+    left: 13%;
 }
 
 .lift-nav li {

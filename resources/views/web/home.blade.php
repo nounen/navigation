@@ -20,7 +20,7 @@
         <div class="tpmain">
             <h1 class="toplogo">
                 <a href="/">
-                    <img src="./images/top-logo.png">
+                    <img src="./images/logo.png">
                 </a>
             </h1>
             <!-- <div class="topsearch">
@@ -119,7 +119,7 @@
 
 <!--topindexcentwrap-->
 <div class="wrapper topindexcentwrap pt10">
-    <div class="mainlist02 pt20 clearfix">
+    <div class="mainlist02 clearfix">
 
         @foreach($categories as $category)
             {{-- 分类大于4 且分类下面有链接 --}}
@@ -159,7 +159,7 @@
                         </div>
 
                         <li class="lsmore" id="category_{{ $category->id }}"
-                            style="text-align: center; padding-top: 3px !important;">
+                            style="text-align: center; margin-top: 12px !important;">
                             <a target="_blank" href=""></a>
                         </li>
 
@@ -170,7 +170,7 @@
                                 visiblePages: 1,
                                 currentPage: 1, // 之前点击的页码, 用户辅助影藏
                                 lastPage: 1,
-                                prev: '<span class="prev"><a href="javascript:void(0);">上一页<\/a><\/span>    ',
+                                prev: '<span class="prev"><a href="javascript:void(0);">上一页<\/a>&nbsp;&nbsp;<\/span> ',
                                 next: '<span class="next"><a href="javascript:void(0);">下一页<\/a><\/span>',
                                 onPageChange: function (nowPage, type) {
                                     $("#category_{{ $category->id }}_links_" + nowPage).show();
@@ -195,17 +195,29 @@
 <div class="tpfooterwrap">
     <div class="tpfooter">
         <div class="tpmain">
-            <!-- <p>
-                <a href="//www.test.com/aboutus/index.html" target="_blank">关于Xxx</a> -
-                <a href="//ww.test.com/aboutus/contact.php?from=news" target="_blank">联系我们</a> -
-                <a href="//www.test.com/aboutus/ad.html" target="_blank">广告服务</a> -
-                <a href="//www.test.com/aboutus/link.html" target="_blank">友情链接</a> -
-                <a href="//www.test.com/aboutus/announce.html" target="_blank">版权声明</a> -
-                <a href="//www.test.com/aboutus/join.html" target="_blank">人才招聘</a> -
-                <a href="//www.test.com/aboutus/events.html" target="_blank">网站动态</a> -
-                <a href="//www.test.com/aboutus/help.html" target="_blank">帮助</a> -
-            </p> -->
-            <p>©copyright 2002-2018 test.com inc all rights reserved. Xxx 版权所有&nbsp;&nbsp;</p>
+            <p>
+                <a href="guanyuwomen.html" target="_blank"><b>关于我们</b></a> &nbsp;&nbsp;
+
+                <a href="jiaruwomen.html" target="_blank"><b>加入我们</b></a> &nbsp;&nbsp;
+
+                <a href="lianxiwomen.html" target="_blank"><b>联系我们</b></a> &nbsp;&nbsp;
+
+                <a href="guanggaohezuo.html" target="_blank"><b>广告合作</b></a> &nbsp;&nbsp;
+
+                <a href="tougao.html" target="_blank"><b>投稿</b></a> &nbsp;&nbsp;
+
+                <a href="guanchayuanjihua.html" target="_blank"><b>观察员计划</b></a> &nbsp;&nbsp;
+
+                <a href="yijianfankui.html" target="_blank"><b>意见反馈</b></a> &nbsp;&nbsp;
+
+                <a href="hezuohuoban.html" target="_blank"><b>合作伙伴</b></a> &nbsp;&nbsp;
+
+                <a href="yinsiquanxieyi.html" target="_blank"><b>隐私权协议</b></a> &nbsp;&nbsp;
+
+                    <img src="./images/erweima.png">
+
+            </p>
+            <section>©2013 KJ800 跨境吧 粤ICP备 16073542 号</section>
         </div>
     </div>
 </div>
