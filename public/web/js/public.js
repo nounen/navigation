@@ -339,36 +339,6 @@ function getQueryString(name) {
     if (r != null) return unescape(r[2]); return null;
 }
 
-function SearchKey() {
-    if (isSearchPage) {
-        window.location.href = "http://search.top.chinaz.com/Search.aspx?url=" +  escape($.trim($("#txtKeyWord").val()));
-    }
-    else {
-        window.open("http://search.top.chinaz.com/Search.aspx?url=" + escape($.trim($("#txtKeyWord").val())));
-    }
-}
-
-function FucusKey() {
-    var obj = $("#txtKeyWord");
-    var title = obj.val();
-    if (title == obj.attr("lang")) {
-        obj.val("");
-    }
-    obj.css("color","#000");
-}
-
-function BlurKey() {
-    var obj = $("#txtKeyWord");
-    var title = obj.val();
-    if (title == "") {
-        obj.val(obj.attr("lang"));
-        obj.css("color", "#778899");
-    }
-    else {
-        obj.css("color", "#000");
-    }
-}
-
 $(function () {
     document.onkeydown = function (event) {
         var e = event || window.event || arguments.callee.caller.arguments[0];
