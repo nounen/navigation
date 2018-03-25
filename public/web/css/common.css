@@ -6394,7 +6394,7 @@ a.qhpcbtn:hover {
 .lift-nav {
     position: fixed;
     top: 162px;
-    left: 13%;
+    left: 100px;
 }
 
 .lift-nav li {
