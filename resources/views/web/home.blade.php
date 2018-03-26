@@ -116,100 +116,11 @@
 </style>
 
 <!--topindexcentwrap-->
-<div class="wrapper topindexcentwrap pt10">
+<div class="wrapper topindexcentwrap pt20">
     {{--<div class="topsearch">--}}
         {{--<input type="text" lang="请输入搜索内容" id="txtkeyword" onblur="blurkey()" onfocus="fucuskey()" class="rtxt" value="请输入搜索内容"/>--}}
         {{--<input id="btnsearch" type="button" onclick="javascript:searchkey();" class="rbtn" />--}}
     {{--</div>--}}
-
-    {{-- 搜索引擎 start: https://blog.csdn.net/u014175572/article/details/49358637 --}}
-    <div id="search">
-        <table>
-            <tr>
-                <td>
-                    <ul>
-                        <li style="display:block;"><img src="./images/search_baidu.png" style="width: 90px;"/></li>
-                        <li style="display:none;"><img src="./images/search_google.png" style="width: 90px;"/></li>
-                    </ul>
-                </td>
-                <td id="from_box" style="padding-left:10px;">
-                    <form id="from_baidu" class="topsearch" style="display:block" action="https://www.baidu.com/baidu" target="_blank" method="get">
-                        <input name="" type="hidden" value="baidu" />
-                        <input class="rbtn" type="text" name="word" />
-                        {{--<input class="button" type="submit" value="百度一下" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'" />--}}
-                    </form>
-                    <form id="from_google" class="topsearch" style="display:none" action="https://www.google.com/search" target="_blank" method="get">
-                        <input class="rbtn" type="text" name="q" />
-                        {{--<input class="button" type="submit" value="google搜索" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'" />--}}
-                    </form>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-    <script>
-    var search = document.getElementById("search");
-    var formbox = document.getElementById('from_box');
-    var forms = formbox.getElementsByTagName("form");
-    var ul = search.getElementsByTagName("ul")[0];
-    var li = ul.getElementsByTagName("li");
-    var length = li.length;
-
-    li[0].onclick = function() {
-        for (var i = 1; i < length; i++) {
-            li[i].style.display = "block";
-        }
-    }
-
-    var n = 0; //第一个显示表单的位置
-    for (var i = 1; i < length; i++) {
-        li[i].onclick = function(a) {
-            return function() {
-                //交换显示的html内容
-                var temp = li[0].innerHTML;
-                li[0].innerHTML = this.innerHTML;
-                this.innerHTML = temp;
-                for (var j = 1; j < length; j++) {
-                    li[j].style.display =
-                        "none";
-                }
-                //交换表单的显示
-                //                      alert(li[0].innerHTML.substring(37,7));
-                //                      alert(li[0].innerHTML.indexOf('baidu'));
-                hidden_from(); //隐藏表单
-                if (li[0].innerHTML.indexOf('baidu') > 0) {
-                    document.getElementById('from_baidu').style.display = 'block';
-                } else if (li[0].innerHTML.indexOf('google') > 0) {
-                    document.getElementById('from_google').style.display = 'block';
-                }
-                //                      alert(this.innerHTML);
-                //                      forms[n].style.display = "none";
-                //                      forms[a].style.display = "block";
-                //                      n = a;
-            }
-        }(i);
-
-        li[i].onmouseover = function() {
-            this.style.border =
-                "#7fb80e 1px solid";
-            this.style.background =
-                "#f2eada";
-        };
-
-        li[i].onmouseout = function() {
-            this.style.border = "0px";
-            this.style.background = "inherit";
-        };
-    }
-
-    //隐藏搜索框表单的函数
-    function hidden_from() {
-        for (var j = 0; j < forms.length; j++) {
-            forms[j].style.display = "none";
-        }
-    }
-    </script>
-    {{-- 搜索引擎 end --}}
 
     {{-- 幻灯片 start --}}
     <div class="swiper-container" style="margin: 0; width: 1447px;">
@@ -245,11 +156,101 @@
     </script>
     {{-- 幻灯片 end --}}
 
-    <div class="mainlist02 clearfix pt10">
+
+    {{-- 搜索引擎 start: https://blog.csdn.net/u014175572/article/details/49358637 --}}
+    <div id="search" class="pt20">
+        <table>
+            <tr>
+                <td>
+                    <ul>
+                        <li style="display:block;"><img src="./images/search_baidu.png" style="width: 90px;"/></li>
+                        <li style="display:none;"><img src="./images/search_google.png" style="width: 90px;"/></li>
+                    </ul>
+                </td>
+                <td id="from_box" style="padding-left:10px;">
+                    <form id="from_baidu" class="topsearch" style="display:block" action="https://www.baidu.com/baidu" target="_blank" method="get">
+                        <input name="" type="hidden" value="baidu" />
+                        <input class="rbtn" type="text" name="word" />
+                        {{--<input class="button" type="submit" value="百度一下" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'" />--}}
+                    </form>
+                    <form id="from_google" class="topsearch" style="display:none" action="https://www.google.com/search" target="_blank" method="get">
+                        <input class="rbtn" type="text" name="q" />
+                        {{--<input class="button" type="submit" value="google搜索" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'" />--}}
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var search = document.getElementById("search");
+        var formbox = document.getElementById('from_box');
+        var forms = formbox.getElementsByTagName("form");
+        var ul = search.getElementsByTagName("ul")[0];
+        var li = ul.getElementsByTagName("li");
+        var length = li.length;
+
+        li[0].onclick = function() {
+            for (var i = 1; i < length; i++) {
+                li[i].style.display = "block";
+            }
+        }
+
+        var n = 0; //第一个显示表单的位置
+        for (var i = 1; i < length; i++) {
+            li[i].onclick = function(a) {
+                return function() {
+                    //交换显示的html内容
+                    var temp = li[0].innerHTML;
+                    li[0].innerHTML = this.innerHTML;
+                    this.innerHTML = temp;
+                    for (var j = 1; j < length; j++) {
+                        li[j].style.display =
+                            "none";
+                    }
+                    //交换表单的显示
+                    //                      alert(li[0].innerHTML.substring(37,7));
+                    //                      alert(li[0].innerHTML.indexOf('baidu'));
+                    hidden_from(); //隐藏表单
+                    if (li[0].innerHTML.indexOf('baidu') > 0) {
+                        document.getElementById('from_baidu').style.display = 'block';
+                    } else if (li[0].innerHTML.indexOf('google') > 0) {
+                        document.getElementById('from_google').style.display = 'block';
+                    }
+                    //                      alert(this.innerHTML);
+                    //                      forms[n].style.display = "none";
+                    //                      forms[a].style.display = "block";
+                    //                      n = a;
+                }
+            }(i);
+
+            li[i].onmouseover = function() {
+                this.style.border =
+                    "#7fb80e 1px solid";
+                this.style.background =
+                    "#f2eada";
+            };
+
+            li[i].onmouseout = function() {
+                this.style.border = "0px";
+                this.style.background = "inherit";
+            };
+        }
+
+        //隐藏搜索框表单的函数
+        function hidden_from() {
+            for (var j = 0; j < forms.length; j++) {
+                forms[j].style.display = "none";
+            }
+        }
+    </script>
+    {{-- 搜索引擎 end --}}
+
+    <div class="mainlist02 clearfix">
         @foreach($categories as $category)
             {{-- 分类大于4 且分类下面有链接 --}}
             @if($category->id > 4 && count($category->links))
-            <div class="mlistwrap w300 mr40">
+            <div class="mlistwrap w300 mr40 pt10">
                 <div class="lscent300">
                     <h4 class="lscehead">
                         <span class="h4tit">
@@ -260,11 +261,11 @@
                         <img src="./images/group.png" style="border:1px solid #e6e5eb; width: 255px;">
                     </h4>
                     <ul>
-                        <li class="lsctit i7">
+                        {{--<li class="lsctit i7">
                             <span class="nos">排名</span>
                             <span class="tname">网站</span>
                             <span class="tscore">&nbsp;</span>
-                        </li>
+                        </li>--}}
 
                         <div id="category_{{ $category->id }}_links">
                             {{-- 分类的链接再分页 --}}
@@ -320,7 +321,7 @@
 
 <!--topindexcentwrap-->
 <!--tpfooterwrap-end-->
-<div class="tpfooterwrap">
+<div class="tpfooterwrap pt10">
     <div class="tpfooter">
         <div class="tpmain">
             <p>
