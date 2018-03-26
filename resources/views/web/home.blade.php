@@ -25,6 +25,47 @@
                     <img src="./images/logo.png">
                 </a>
             </h1>
+
+            {{-- 节日倒计时 start --}}
+            <div style="padding-top: 14px; padding-left: 1117px;">
+                <script type="text/javascript">
+                //获取当前系统时间
+                var now=new Date();
+
+                //获取节日时间
+                var date1=new Date('2018/11/1');
+                var date2=new Date('2018/11/22');
+                var date3=new Date('2018/11/23');
+                var date4=new Date('2018/12/25');
+
+                //当前日期距初始日期的毫秒数
+                var s0=now.getTime();
+
+                //节日距初始日期的毫秒数
+                var s1=date1.getTime();
+                var s2=date2.getTime();
+                var s3=date3.getTime();
+                var s4=date4.getTime();
+
+                //到节日还有多少毫秒数
+                t1=s1-s0;
+                t2=s2-s0;
+                t3=s3-s0;
+                t4=s4-s0;
+
+                //到节日还有多少天
+                var riqi1=Math.ceil(t1/(1000*60*60*24));
+                var riqi2=Math.ceil(t2/(1000*60*60*24));
+                var riqi3=Math.ceil(t3/(1000*60*60*24));
+                var riqi4=Math.ceil(t4/(1000*60*60*24));
+
+                document.write('距离 <span style="color:#5a98de;" title="2018-11-1"> 万圣节 </span>还有 <span style="color:#ff4300;">'+riqi1+'</span> 天&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;');
+                document.write('距离 <span style="color:#5a98de;"title="2018-11-22"> 感恩节 </span>还有 <span style="color:#ff4300;">'+riqi2+'</span> 天&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br>');
+                document.write('距离 <span style="color:#5a98de;"title="2018-12-25"> 圣诞节 </span>还有 <span style="color:#ff4300;">'+riqi4+'</span> 天&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;');
+                document.write('距离 <span style="color:#5a98de;"title="2018-11-23"> 黑色星期五 </span>还有 <span style="color:#ff4300;">'+riqi3+'</span> 天');
+                </script>
+            </div>
+            {{-- 节日倒计时 end --}}
         </div>
     </div>
 
