@@ -15,14 +15,22 @@ $(document).ready(function () {
     //navbar
     $(".topnav-menuitem").hover(function () {
         var index = $(this).index();
-        $("#navbar").addClass("topnav-showWrap-show");
-        $(".menu-title").eq(index).addClass("current");
-        $("#navbar").css("overflow", "visible");
+
+        if (index < 2) {
+            $("#double_nav_" + index).show();
+            $("#navbar").addClass("topnav-showWrap-show");
+            $(".menu-title").eq(index).addClass("current");
+            $("#navbar").css("overflow", "visible");
+        }
     }, function () {
         var index = $(this).index();
-        $("#navbar").removeClass("topnav-showWrap-show");
-        $(".menu-title").eq(index).removeClass("current");
-        $("#navbar").css("overflow", "hidden");
+
+        if (index < 2) {
+            $("#double_nav_" + index).hide();
+            $("#navbar").removeClass("topnav-showWrap-show");
+            $(".menu-title").eq(index).removeClass("current");
+            $("#navbar").css("overflow", "hidden");
+        }
     });
 
     var action = getQueryString("action");

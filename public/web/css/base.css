@@ -1043,6 +1043,7 @@ body {
 }
 
 .topnav-showwrap .topnav-layout .topnav-menu .topnav-content .topnav-centbox .topnav-menuitem .menuitemcent {
+    width: 1433px;
     height: 230px;
     border-right: 1px solid transparent;
     overflow: hidden;
@@ -1130,7 +1131,7 @@ body {
 }
 
 .topnav-showwrap .topnav-layout .topnav-menu .topnav-content .topnav-centbox .topnav-menuitemthree .menuitemcent .menuitem-sublist .subitem-wp {
-    width: 45%;
+    width: 10%;
 }
 
 .topnav-showwrap .topnav-layout .topnav-menu .topnav-content .topnav-centbox .topnav-menuitemtwo {
