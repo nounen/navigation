@@ -791,7 +791,7 @@ body {
 
 .toppageheadwrap {
     width: 100%;
-    background-color: #fff;
+    background-color: #232f3f;
 }
 
 .tpmain {
@@ -1004,7 +1004,8 @@ body {
 
 .topnav-showwrap .topnav-layout .topnav-menu {
     height: 40px;
-    background: #4d7bb9;
+    background: #232f3f;
+    border-top: 1px #5f7a96 solid;
 }
 
 .topnav-showwrap .topnav-layout .topnav-menu .topnav-content {
@@ -1032,14 +1033,14 @@ body {
     font-size: 16px;
     line-height: 40px;
     height: 40px;
-    border-right: 1px solid #466fb1;
-    border-left: 1px solid #5283bd;
+    /*border-right: 1px solid #466fb1;*/
+    /*border-left: 1px solid #5283bd;*/
     text-align: center;
     text-decoration: none;
 }
 
 .topnav-showwrap .topnav-layout .topnav-menu .topnav-content .topnav-centbox .topnav-menuitem .current, .topnav-showwrap .topnav-layout .topnav-menu .topnav-content .topnav-centbox .topnav-menuitem .mhlight {
-    color: #fde800;
+    color: #ff9800;
 }
 
 .topnav-showwrap .topnav-layout .topnav-menu .topnav-content .topnav-centbox .topnav-menuitem .menuitemcent {
@@ -1050,7 +1051,7 @@ body {
     border-color: #ddd;
     border-left: 1px solid transparent;
     transition: all ease-in .2s;
-    background-color: #f1f1f1;
+    background-color: #e5e5e5;
     padding-left: 12px;
     padding-top: 14px;
 }
@@ -1089,7 +1090,7 @@ body {
 }
 
 .topnav-showwrap .topnav-layout .topnav-menu .topnav-content .topnav-centbox .topnav-menuitem:hover .menu-title {
-    background-color: #598cd0;
+    background-color: #33455b;
 }
 
 .topnav-showwrap .topnav-layout .topnav-menu .topnav-content .topnav-centbox .topnav-menuitemone {

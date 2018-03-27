@@ -27,7 +27,7 @@
             </h1>
 
             {{-- 节日倒计时 start --}}
-            <div style="padding-top: 14px; padding-left: 1117px;">
+            <div style="padding-top: 14px; padding-left: 1117px; color: #ffffff;">
                 <script type="text/javascript">
                 //获取当前系统时间
                 var now=new Date();
@@ -59,10 +59,10 @@
                 var riqi3=Math.ceil(t3/(1000*60*60*24));
                 var riqi4=Math.ceil(t4/(1000*60*60*24));
 
-                document.write('距离 <span style="color:#5a98de;" title="2018-11-1"> 万圣节 </span>还有 <span style="color:#ff4300;">'+riqi1+'</span> 天&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;');
-                document.write('距离 <span style="color:#5a98de;"title="2018-11-22"> 感恩节 </span>还有 <span style="color:#ff4300;">'+riqi2+'</span> 天&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br>');
-                document.write('距离 <span style="color:#5a98de;"title="2018-12-25"> 圣诞节 </span>还有 <span style="color:#ff4300;">'+riqi4+'</span> 天&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;');
-                document.write('距离 <span style="color:#5a98de;"title="2018-11-23"> 黑色星期五 </span>还有 <span style="color:#ff4300;">'+riqi3+'</span> 天');
+                document.write('距离 <span style="color:#ff9800;" title="2018-11-1"> 万圣节 </span>还有 <span>'+riqi1+'</span> 天&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;');
+                document.write('距离 <span style="color:#ff9800;" title="2018-11-22"> 感恩节 </span>还有 <span>'+riqi2+'</span> 天&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <br>');
+                document.write('距离 <span style="color:#ff9800;" title="2018-12-25"> 圣诞节 </span>还有 <span>'+riqi4+'</span> 天&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;');
+                document.write('距离 <span style="color:#ff9800;" title="2018-11-23"> 黑色星期五 </span>还有 <span>'+riqi3+'</span> 天');
                 </script>
             </div>
             {{-- 节日倒计时 end --}}
