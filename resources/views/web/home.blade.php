@@ -92,7 +92,7 @@
                         <div class="topnav-menuitem topnav-menuitemthree">
                             <a class="menu-title" style="cursor: default;">{{ $b2c->name }}</a>
 
-                            <div class="menuitemcent leftbor" id="double_nav_1" style="display: none; margin-left:-374px">
+                            <div class="menuitemcent leftbor" id="double_nav_1" style="display: none; margin-left:-139px">
                                 <ul class="menuitem-sublist">
                                     @foreach($b2c_subs as $sub)
                                     <li class="subitem-wp">
