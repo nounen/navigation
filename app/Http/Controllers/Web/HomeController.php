@@ -49,7 +49,10 @@ class HomeController extends BaseController
 
             $data['categories'] = $category->subs->load('links');
         } else {
-            $data['categories'] = Category::with('links','subs')->get();
+            // 首页只取主力平台下面的最后一级分类
+            $ids = Category::where('parent_id', Category::TYPE_PLATFORM_ID)->pluck('id');
+
+            $data['categories'] = Category::whereIn('parent_id', $ids)->with('links','subs')->get();
         }
 
         return view('web.home', $data);
