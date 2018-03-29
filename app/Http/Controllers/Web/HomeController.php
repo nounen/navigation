@@ -18,7 +18,7 @@ class HomeController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
-    public function home($id = 0)
+    public function home($id = 1)
     {
         $data = [];
 
@@ -48,11 +48,6 @@ class HomeController extends BaseController
             $category = Category::find($id);
 
             $data['categories'] = $category->subs->load('links');
-        } else {
-            // 首页只取主力平台下面的最后一级分类
-            $ids = Category::where('parent_id', Category::TYPE_PLATFORM_ID)->pluck('id');
-
-            $data['categories'] = Category::whereIn('parent_id', $ids)->with('links','subs')->get();
         }
 
         return view('web.home', $data);
