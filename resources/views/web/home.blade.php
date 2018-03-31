@@ -272,7 +272,7 @@
                             <b>{{ $category->name }}</b>
                         </span>
                         
-                        <img src="./images/group.png" style="border:1px solid #e6e5eb; width: 255px;">
+                        <img src="./images/{{$category->name}}.png" style="border:1px solid #e6e5eb; width: 255px;">
                     </h4>
                     <ul>
                         {{--<li class="lsctit i7">

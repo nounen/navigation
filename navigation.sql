@@ -4,13 +4,13 @@ Navicat MySQL Data Transfer
 Source Server         : bash
 Source Server Version : 50721
 Source Host           : localhost:3306
-Source Database       : laravel5.5_admin
+Source Database       : navigation
 
 Target Server Type    : MYSQL
 Target Server Version : 50721
 File Encoding         : 65001
 
-Date: 2018-03-24 23:47:44
+Date: 2018-03-29 19:53:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,39 +31,23 @@ CREATE TABLE `category` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of category
 -- ----------------------------
-INSERT INTO `category` VALUES ('1', '0', '1', '1', '3', '潜力平台', '1', '2018-03-22 22:21:50', '2018-03-22 14:41:57', null);
-INSERT INTO `category` VALUES ('2', '0', '2', '1', '3', '主流B2C', '2', '2018-03-22 22:22:23', '2018-03-22 22:22:26', null);
+INSERT INTO `category` VALUES ('1', '0', '1', '1', '2', '潜力平台', '1', '2018-03-22 22:21:50', '2018-03-22 14:41:57', null);
+INSERT INTO `category` VALUES ('2', '0', '2', '1', '2', '主流B2C', '2', '2018-03-22 22:22:23', '2018-03-22 22:22:26', null);
 INSERT INTO `category` VALUES ('3', '0', '3', '1', '2', '亚马逊', '3', '2018-03-22 22:22:47', '2018-03-22 22:22:51', null);
 INSERT INTO `category` VALUES ('4', '0', '4', '1', '1', '左侧导航', '999', '2018-03-23 21:10:44', '2018-03-23 21:10:46', null);
-INSERT INTO `category` VALUES ('5', '1', '1', '2', '0', '主力平台1', '1', '2018-03-23 21:17:37', '2018-03-23 21:17:38', null);
-INSERT INTO `category` VALUES ('6', '1', '1', '2', '0', '主力平台2', '2', '2018-03-23 21:18:29', '2018-03-24 04:19:45', null);
-INSERT INTO `category` VALUES ('7', '2', '2', '2', '0', '主流一', '1', '2018-03-23 21:19:24', '2018-03-23 15:33:37', null);
-INSERT INTO `category` VALUES ('8', '2', '2', '2', '0', '主流二', '2', '2018-03-23 21:19:35', '2018-03-23 21:19:37', null);
-INSERT INTO `category` VALUES ('10', '1', '1', '2', '0', '主流平台3', '3', '2018-03-23 14:49:27', '2018-03-24 15:38:19', null);
-INSERT INTO `category` VALUES ('11', '5', '1', '3', '0', '主力平台1-level3-001', '1', '2018-03-23 15:09:31', '2018-03-23 15:09:31', null);
-INSERT INTO `category` VALUES ('12', '7', '2', '3', '0', '主流一 -- Sub1', '1', '2018-03-23 15:33:49', '2018-03-23 15:34:08', null);
-INSERT INTO `category` VALUES ('13', '3', '3', '2', '0', '亚马逊sub1', '1', '2018-03-23 15:35:04', '2018-03-23 15:35:04', null);
-INSERT INTO `category` VALUES ('14', '3', '3', '2', '0', '亚马逊sub2', '2', '2018-03-23 15:35:10', '2018-03-23 15:35:10', null);
-INSERT INTO `category` VALUES ('15', '5', '1', '3', '0', '主力平台1-level3-002', '2', '2018-03-24 04:22:11', '2018-03-24 04:22:11', null);
-INSERT INTO `category` VALUES ('16', '3', '3', '2', '0', '亚马逊sub3', '3', '2018-03-24 11:52:14', '2018-03-24 11:52:14', null);
-INSERT INTO `category` VALUES ('17', '3', '3', '2', '0', '亚马逊sub4', '4', '2018-03-24 11:52:21', '2018-03-24 11:52:21', null);
-INSERT INTO `category` VALUES ('18', '3', '3', '2', '0', '亚马逊sub5', '5', '2018-03-24 11:52:26', '2018-03-24 11:52:26', null);
-INSERT INTO `category` VALUES ('19', '3', '3', '2', '0', '亚马逊sub6', '6', '2018-03-24 11:52:35', '2018-03-24 11:52:35', null);
-INSERT INTO `category` VALUES ('20', '3', '3', '2', '0', '亚马逊su7', '7', '2018-03-24 11:52:43', '2018-03-24 11:52:43', null);
-INSERT INTO `category` VALUES ('21', '3', '3', '2', '0', '亚马逊sub8', '8', '2018-03-24 11:52:48', '2018-03-24 11:52:48', null);
-INSERT INTO `category` VALUES ('22', '3', '3', '2', '0', '亚马逊sub9', '9', '2018-03-24 11:52:54', '2018-03-24 11:52:54', null);
-INSERT INTO `category` VALUES ('23', '3', '3', '2', '0', '亚马逊sub10', '10', '2018-03-24 11:53:02', '2018-03-24 11:53:02', null);
-INSERT INTO `category` VALUES ('24', '3', '3', '2', '0', '亚马逊sub11', '11', '2018-03-24 11:53:10', '2018-03-24 11:53:10', null);
-INSERT INTO `category` VALUES ('25', '3', '3', '2', '0', '亚马逊sub12', '12', '2018-03-24 11:53:15', '2018-03-24 11:53:15', null);
-INSERT INTO `category` VALUES ('26', '3', '3', '2', '0', '亚马逊sub13', '13', '2018-03-24 11:53:20', '2018-03-24 11:53:20', null);
-INSERT INTO `category` VALUES ('27', '3', '3', '2', '0', '亚马逊sub14', '14', '2018-03-24 11:53:26', '2018-03-24 11:53:26', null);
-INSERT INTO `category` VALUES ('28', '3', '3', '2', '0', '亚马逊sub15', '15', '2018-03-24 11:53:31', '2018-03-24 11:53:31', null);
-INSERT INTO `category` VALUES ('29', '1', '1', '2', '0', '主流平台4', '4', '2018-03-24 15:38:03', '2018-03-24 15:38:09', '2018-03-24 15:38:09');
+INSERT INTO `category` VALUES ('5', '1', '1', '2', '0', '平台1', '1', '2018-03-28 14:03:13', '2018-03-28 14:03:14', null);
+INSERT INTO `category` VALUES ('6', '1', '1', '2', '0', '平台2', '2', '2018-03-28 14:03:20', '2018-03-28 14:03:20', null);
+INSERT INTO `category` VALUES ('7', '1', '1', '2', '0', '平台3', '3', '2018-03-28 14:03:26', '2018-03-28 14:03:26', null);
+INSERT INTO `category` VALUES ('8', '1', '1', '2', '0', '平台4', '4', '2018-03-28 14:03:33', '2018-03-28 14:03:33', null);
+INSERT INTO `category` VALUES ('9', '1', '1', '2', '0', '平台5', '5', '2018-03-28 14:03:40', '2018-03-28 14:03:40', null);
+INSERT INTO `category` VALUES ('10', '2', '2', '2', '0', '主流1', '1', '2018-03-28 14:04:57', '2018-03-28 14:04:57', null);
+INSERT INTO `category` VALUES ('11', '2', '2', '2', '0', '主流2', '2', '2018-03-28 14:05:02', '2018-03-28 14:05:02', null);
+INSERT INTO `category` VALUES ('12', '2', '2', '2', '0', '主流3', '3', '2018-03-28 14:05:07', '2018-03-28 14:05:07', null);
 
 -- ----------------------------
 -- Table structure for link
@@ -79,124 +63,16 @@ CREATE TABLE `link` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=114 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ----------------------------
 -- Records of link
 -- ----------------------------
-INSERT INTO `link` VALUES ('1', '11', '百度edit', 'https://baidu.com', '1', '2018-03-24 11:39:39', '2018-03-24 04:09:38', null);
-INSERT INTO `link` VALUES ('2', '11', '谷歌', 'https://www.google.com', '2', '2018-03-24 04:01:57', '2018-03-24 04:01:57', null);
-INSERT INTO `link` VALUES ('3', '11', '鸭子论坛', 'https://www.yaiz.com', '3', '2018-03-24 04:04:50', '2018-03-24 04:13:22', '2018-03-24 04:13:22');
-INSERT INTO `link` VALUES ('4', '4', '左1', 'https://www.left-one.com', '1', '2018-03-24 04:36:28', '2018-03-24 04:36:28', null);
-INSERT INTO `link` VALUES ('5', '4', '左2', 'https://www.left-one.com', '2', '2018-03-24 09:38:05', '2018-03-24 09:38:05', null);
-INSERT INTO `link` VALUES ('6', '4', '左3', 'https://www.left-one.com', '3', '2018-03-24 09:38:13', '2018-03-24 09:38:13', null);
-INSERT INTO `link` VALUES ('7', '4', '左4', 'https://www.left-one.com', '4', '2018-03-24 09:38:22', '2018-03-24 09:38:22', null);
-INSERT INTO `link` VALUES ('8', '4', '左5', 'https://www.left-one.com', '5', '2018-03-24 09:38:29', '2018-03-24 09:38:29', null);
-INSERT INTO `link` VALUES ('9', '13', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('10', '13', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('11', '13', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('12', '13', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('13', '13', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('14', '13', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('15', '13', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('16', '17', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('17', '17', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('18', '17', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('19', '17', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('20', '17', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('21', '17', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('22', '17', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('23', '18', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('24', '18', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('25', '18', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('26', '18', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('27', '18', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('28', '18', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('29', '18', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('30', '16', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('31', '16', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('32', '16', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('33', '16', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('34', '16', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('35', '16', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('36', '16', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('37', '19', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('38', '19', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('39', '19', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('40', '19', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('41', '19', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('42', '19', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('43', '19', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('44', '20', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('45', '20', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('46', '20', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('47', '20', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('48', '20', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('49', '20', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('50', '20', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('51', '21', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('52', '21', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('53', '21', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('54', '21', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('55', '21', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('56', '21', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('57', '21', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('58', '22', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('59', '22', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('60', '22', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('61', '22', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('62', '22', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('63', '22', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('64', '22', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('65', '23', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('66', '23', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('67', '23', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('68', '23', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('69', '23', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('70', '23', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('71', '23', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('72', '24', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('73', '24', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('74', '24', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('75', '24', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('76', '24', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('77', '24', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('78', '24', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('79', '25', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('80', '25', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('81', '25', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('82', '25', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('83', '25', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('84', '25', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('85', '25', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('86', '26', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('87', '26', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('88', '26', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('89', '26', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('90', '26', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('91', '26', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('92', '26', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('93', '27', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('94', '27', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('95', '27', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('96', '27', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('97', '27', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('98', '27', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('99', '27', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('100', '28', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('101', '28', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('102', '28', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('103', '28', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('104', '28', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('105', '28', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('106', '28', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('107', '14', '亚马逊链接1', 'http://www.amazon.com', '1', '2018-03-24 11:39:54', '2018-03-24 11:39:54', null);
-INSERT INTO `link` VALUES ('108', '14', '亚马逊链接2', 'http://www.amazon.com', '2', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('109', '14', '亚马逊链接3', 'http://www.amazon.com', '3', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('110', '14', '亚马逊链接4', 'http://www.amazon.com', '4', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('111', '14', '亚马逊链接5', 'http://www.amazon.com', '5', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('112', '14', '亚马逊链接6', 'http://www.amazon.com', '6', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
-INSERT INTO `link` VALUES ('113', '14', '亚马逊链接7', 'http://www.amazon.com', '7', '2018-03-24 11:40:06', '2018-03-24 11:40:06', null);
+INSERT INTO `link` VALUES ('1', '5', '平台1链接1', 'http://www.baidu.com', '1', '2018-03-28 14:04:12', '2018-03-28 14:06:22', null);
+INSERT INTO `link` VALUES ('2', '5', '平台1链接2', 'http://www.baidu.com', '2', '2018-03-28 14:04:47', '2018-03-28 14:06:06', null);
+INSERT INTO `link` VALUES ('3', '6', '平台2链接1', 'http://www.test.com', '1', '2018-03-28 14:05:35', '2018-03-28 14:05:35', null);
+INSERT INTO `link` VALUES ('4', '6', '平台2链接2', 'http://www.baidu.com', '2', '2018-03-28 14:05:44', '2018-03-28 14:05:44', null);
+INSERT INTO `link` VALUES ('5', '6', '平台2链接3', 'http://www.baidu.com', '3', '2018-03-28 14:05:55', '2018-03-28 14:05:55', null);
 
 -- ----------------------------
 -- Table structure for migrations
@@ -286,4 +162,4 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', 'admin', 'admin@qq.com', '$2y$10$beWkYAiuI2TavPsa.yuGB.xALUleLkkbp.q6TPYXB9HC5Me4jL/SG', 'MOTfXDdOGFtDEHtvRzNkl9RlWyjatHerDPzZcwWvLFYQeUepRWwrZsBEJbjp', '2018-01-22 13:03:41', '2018-01-22 13:03:41');
+INSERT INTO `users` VALUES ('1', 'admin', 'admin@qq.com', '$2y$10$beWkYAiuI2TavPsa.yuGB.xALUleLkkbp.q6TPYXB9HC5Me4jL/SG', 'yUdjGUYPWt3z18emgqL0OtMTu50XrLtSza7cGMVVoXFU6nvyGgyYmgVG3vMQ', '2018-01-22 13:03:41', '2018-01-22 13:03:41');
