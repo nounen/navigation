@@ -15,7 +15,7 @@
     <script src="{{ asset('web/js/public.js') }}" type="text/jscript" language="javascript"></script>
 </head>
 
-<body class="bgwhite" id="content">
+<body class="bgwhite" id="content" style="width: 1920px;">
 <!--toppageheadwrap-begin-->
 <div class="toppageheadwrap">
     <div class="toplogowrap clearfix">
